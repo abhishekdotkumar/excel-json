@@ -46,7 +46,7 @@ export class AppComponent {
         let currentExcelData = currentExcel[1];
         let fileName = `${currentExcelName}.json`;
         let url = `data:text/json;charset=utf-8,${encodeURIComponent(
-          JSON.stringify(currentExcelData)
+          JSON.stringify(currentExcelData) 
         )}`;
         this.jsonFilesArray.push({
           id: i,
