@@ -14,6 +14,13 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(733f71e1-ee38-4fc4-b7d8-e66dd29c78d1)'
+    appType: 'webApp'
+    appName: 'excel-json'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 
 - script: |
     npm install -g @angular/cli
